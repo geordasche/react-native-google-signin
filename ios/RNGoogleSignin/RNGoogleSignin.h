@@ -1,8 +1,13 @@
 #ifndef RN_GoogleSigning_h
 #define RN_GoogleSigning_h
 
-#import <React/RCTBridgeModule.h>
-#import <React/RCTConvert.h>
+#if __has_include(<React/RCTBridgeModule.h>)
+ #import <React/RCTBridgeModule.h>
+ #import <React/RCTConvert.h>
+#else
+ #import "RCTBridgeModule.h"
+ #import "RCTConvert.h"
+#endif
 
 #import <GoogleSignIn/GoogleSignIn.h>
 
